@@ -10,7 +10,7 @@ let now: Date = new Date();
 
 //Arrays
 let color: string[] = ['red', 'green', 'blue'];
-let jersyNum: number[] = [2, 3, 4, 6];
+let jerseyNum: number[] = [2, 3, 4, 6];
 let truth: boolean[] = [true, false, true];
 
 // classes

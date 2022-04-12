@@ -18,8 +18,22 @@ const looker = (message: string): void => {
   console.log(message);
 }
 
-const unLook = (mess: string): never => {
+const throwError = (mess: string): void => {
   if (!mess) {
     throw new Error(mess)
   }
 }
+
+const todaysWeather = {
+  date: new Date(),
+  weather: 'sunny'
+};
+
+const logWeather = ({ date, weather }: { date: Date, weather: string }): void => {
+  console.log(date);
+  console.log(weather);
+};
+
+logWeather(todaysWeather);
+
+
