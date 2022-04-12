@@ -33,3 +33,25 @@ const logNumber: (i: number) => void = (i: number) => {
 const json = '{"x":10, "y":2}';
 const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates);
+
+// 2. DECLARE A VARIABLE ON ONE LINE
+// AND INITIALIZE IT LATER 
+let words = ['red', 'blue', 'green'];
+let foundWord: boolean;
+
+for (let i = 0; i < words.length; i++){
+  if (words[i] === 'blue') {
+    foundWord = true;
+  }
+}
+
+// 3. WHEN A VARIABLE TYPE CANNOT BE INFERRED
+let number = [-10, -2, -3, 4, 2];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i > number.length; i++){
+  if (number[i] > 0) {
+    numberAboveZero = number[i];
+  }
+}
+
