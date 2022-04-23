@@ -1,21 +1,30 @@
 //CREATES NEW TYPE, DESCRIBING THE PROPERTY NAMES AND VALUE TYPES OF AN OBJECT
 
-interface Vehicle {
-  name: string;
-  year: number;
-  broken: boolean;
+interface Reportable {
+  summary(): string;
 }
 
 const oldCivic = {
   name: 'civic',
-  year: 2000,
-  broken: true
+  year: new Date(),
+  broken: true,
+  summary(): string {
+    return `Name: ${this.name}`;
+  }
 };
 
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(`Name: ${vehicle.name}`);
-  console.log(`Name: ${vehicle.year}`);
-  console.log(`Name: ${vehicle.broken}`);
+const drink = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 30,
+  summary(): string {
+    return `My Drink is ${this.sugar} grams of sugar`;
+  }
 };
 
-printVehicle(oldCivic);
+const printReport = (item: Reportable): void => {
+  console.log(`Name: ${item.summary()}`);
+};
+
+printReport(oldCivic);
+printReport(drink);

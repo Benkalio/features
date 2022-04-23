@@ -1,7 +1,7 @@
 //ARRAY-LIKE STRUCTURE WHERE EACH ELEMENT 
 // REPRESENTS SOME PROPERTY OF A RECORD
 
-const drink = {
+const myDrink = {
   color: "brown",
   carbonated: true,
   sugar: 40
