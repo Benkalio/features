@@ -2,9 +2,16 @@
 //MODIFIERS: PUBLIC, PRIVATE, PROTECTED
 
 class MyVehicles {
-  // public drive(): void {
-  //   console.log('start engine');
-  // }
+  color: string;
+  // started: boolean;
+
+  constructor(color: string) {
+    this.color = color;
+  }
+
+  // OR AS A SHORTCUT OF ABOVE CONSTRUCTOR FOR INSTANCE OF A VARIABLE
+  // constructor(public started: boolean) {}
+
   protected hunk(): void{
     console.log('pum pum');
     
@@ -21,7 +28,9 @@ class Car extends MyVehicles {
     this.hunk();
   }
 }
+const myVehicles = new MyVehicles('green');
+console.log(myVehicles.color)
 
-const car = new Car();
+// const car = new Car();
 
-car.startDriving();
+// car.startDriving();
